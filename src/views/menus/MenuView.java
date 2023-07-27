@@ -44,10 +44,9 @@ public class MenuView {
         System.out.println("||                      ||");
         System.out.println("|========================|");
         System.out.print("Nome: ");
-        String nome = scanner.next();
+        String nome = scanner.nextLine();
         System.out.print("Senha: ");
         String senha = scanner.next();
-        senha = scanner.next();
         if(nome.equals(conta.getNome())  && senha.equals(conta.getSenha())){
 
             System.out.println("Login realizado com sucesso!");
@@ -64,10 +63,9 @@ public class MenuView {
         System.out.println("||                      ||");
         System.out.println("|========================|");
         System.out.print("Nome: ");
-        String nome = scanner.next();
+        String nome = scanner.nextLine();
         System.out.print("Senha: ");
         String senha = scanner.next();
-        senha = scanner.next();
 
         System.out.print("Tipo da conta (1 para CORRENTE, 2 para POUPANCA): ");
         int tipoContaInt = scanner.nextInt();
@@ -135,7 +133,7 @@ public class MenuView {
                     break;
                 case 6:
                     float aux = conta.getInvestimento();
-                    conta.setInvestimento(aux*(float) 0.05);
+                    conta.setInvestimento(aux+aux*(float) 0.05);
                     break;
                 case 0:
                     menu();
